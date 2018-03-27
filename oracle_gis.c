@@ -461,6 +461,7 @@ oracleGetEWKBLen(oracleSession *session, ora_geometry *geom)
 			const unsigned etype = geom->elem[i+1];
 			const unsigned interpretation = geom->elem[i+2];
 			if (!((1 == etype && 1 == interpretation)
+			        ||(1 == etype && 0 == interpretation)
 				||(2 == etype && 1 == interpretation)
 				||(1003 == etype && 1 == interpretation)
 				||(2003 == etype && 1 == interpretation)
